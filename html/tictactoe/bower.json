@@ -1,0 +1,20 @@
+{
+  "name": "tictactoe-client",
+  "version": "0.0.1",
+  "description": "Simple realtime multiplayer Tic-Tac-Toe game. Powered by nodejs, socket.io and easeljs, jquery, bootstrap.",
+  "authors": [
+    "nquocnghia"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "easeljs": "*"
+  }
+}

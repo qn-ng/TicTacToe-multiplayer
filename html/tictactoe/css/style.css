@@ -1,0 +1,25 @@
+body {
+    margin-top: 10px;
+    background-color: #DDD;
+}
+
+.status {
+    font-size: 1.5em;
+    color: red;
+}
+
+.active {
+    background-color: green;
+}
+
+.current {
+    font-weight: bold;
+}
+
+li {
+    background-color: red;
+}
+
+#messagePanel, #loadingTxt, ul {
+    display: none;
+}

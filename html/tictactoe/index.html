@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tic-Tac-Toe by nquocnghia</title>
+
+        <!-- Bootstrap -->
+        <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body onLoad="init();">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <canvas id="mainCanvas"></canvas>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p id="loadingTxt" class="text-center">Searching for available player...</p>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter your name" id="nameTxt">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button" id="joinBtn">join game</button>
+                                </span>
+                            </div>
+                            <ul class="list-group">
+                                <li id="playerX" class="list-group-item list-group-item-info">[X] waiting...</li>
+                                <li id="playerO" class="list-group-item list-group-item-info">[O] waiting...</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="messagePanel" class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Conversation</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <textarea id="logPanel" class="form-control" rows="10" disabled="disabled"></textarea>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="type your message..." id="messageTxt">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button" id="sendBtn">send</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/easeljs-0.7.1.min.js"></script>
+        <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="js/net.js"></script>
+    </body>
+</html>

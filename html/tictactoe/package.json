@@ -1,0 +1,11 @@
+{
+  "name": "tictactoe-client",
+  "version": "0.0.1",
+  "description": "Simple realtime multiplayer Tic-Tac-Toe game. Powered by nodejs, socket.io and easeljs",
+  "author": "nquocnghia",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bowercopy": "^1.1.0",
+    "grunt-string-replace": "^1.0.0"
+  }
+}
