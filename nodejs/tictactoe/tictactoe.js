@@ -44,7 +44,7 @@ setInterval(function () {
         playerO: playerO.playerName,
         currentTurn: table.getCurrentTurn()
     });
-}, 10000);
+}, 2000);
 
 io.on('connection', function (socket) {
     console.log('Player (id: ' + socket.id + ') connected');
