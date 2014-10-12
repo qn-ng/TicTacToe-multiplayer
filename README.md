@@ -8,17 +8,19 @@ _Simple realtime multiplayer Tic-Tac-Toe game. Powered by nodejs, socket.io and 
 
 Be sure you have `nodejs`, `npm`, `bower` and `grunt-cli` pre-installed. To install all the project's dependencies, run the following commands:
 
+#### Server
+
+1. `cd nodejs/tictactoe/`
+2. `npm install`
+3. `node tictactoe.js`
+
 #### Client
 
 1. `cd html/tictactoe/`
 2. `npm install`
 3. `grunt dev`
 
-#### Server
-
-1. `cd nodejs/tictactoe/`
-2. `npm install`
-3. `node tictactoe.js`
+Open `html/tictactoe/index.html` to start the game.
 
 ## Technology
 * NodeJS + Socket.IO
