@@ -1,9 +1,10 @@
 var http = require('http').Server(function (req, res) {
     res.writeHead(301, {
-        "location" : "http://bassdrop.vn"
+        "location": "http://localhost"
     });
     res.end();
 });
+
 var io = require('socket.io')(http);
 var Table = require('./_table.js');
 
@@ -89,24 +90,13 @@ io.on('connection', function (socket) {
         waitingQueue.push(socket);
     });
 
+    socket.on("leave game", function (data) {
+        leaveTable(socket);
+    });
+
     socket.on('disconnect', function () {
         console.log('Player (id: ' + socket.id + ') disconnected');
-        var index = waitingQueue.indexOf(socket);
-        if (index != -1)
-            waitingQueue.splice(index, 1);
-        if (socket.table) {
-            var table = socket.table;
-            var winner;
-            if (table.getPlayerX() == socket)
-                winner = table.getPlayerO();
-            else
-                winner = table.getPlayerX();
-
-            io.to(socket.currentTable).emit('opponent disconnected', winner == table.getPlayerX() ? "x" : "o");
-
-            table = null;
-            winner.table = null;
-        }
+        leaveTable(socket);
     });
 
     socket.on('chat message', function (msg) {
@@ -117,6 +107,25 @@ io.on('connection', function (socket) {
         }
     });
 });
+
+var leaveTable = function (socket) {
+    var index = waitingQueue.indexOf(socket);
+    if (index != -1)
+        waitingQueue.splice(index, 1);
+    if (socket.table) {
+        var table = socket.table;
+        var winner;
+        if (table.getPlayerX() == socket)
+            winner = table.getPlayerO();
+        else
+            winner = table.getPlayerX();
+
+        io.to(socket.currentTable).emit('opponent disconnected', winner == table.getPlayerX() ? "x" : "o");
+
+        table = null;
+        winner.table = null;
+    }
+};
 
 http.listen(3000, function () {
     console.log('listening on *:3000');

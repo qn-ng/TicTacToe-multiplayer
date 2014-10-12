@@ -82,7 +82,7 @@ var addOverlay = function (title) {
 };
 
 var removeOverlay = function () {
-    stage.removeChild(overlayContainter)
+    stage.removeChild(overlayContainter);
     overlayContainter = null;
     stage.update();
 };
@@ -117,5 +117,19 @@ var setValue = function (x, y, value) {
     text.color = value === "x" ? "#555" : "#FF7777";
     cell.graphics.clear().beginFill("#C0D8FA").drawRect(CELL_MARGIN + cell.pos.x*(CELL_MARGIN + CELL_WIDTH), CELL_MARGIN + cell.pos.y*(CELL_MARGIN + CELL_WIDTH), CELL_WIDTH, CELL_WIDTH).endFill();
     lastMove = cell;
+    stage.update();
+};
+
+var drawResultLine = function (data) {
+    for (var i = 0; i < data.length; i++) {
+        var pos = data[i];
+        var line = new createjs.Shape();
+        line.graphics.setStrokeStyle(3);
+        line.graphics.beginStroke("#555555");
+        line.graphics.moveTo(CELL_MARGIN + pos[0].x * (CELL_MARGIN + CELL_WIDTH) + CELL_WIDTH * 0.5, CELL_MARGIN + pos[0].y * (CELL_MARGIN + CELL_WIDTH) + CELL_WIDTH * 0.5);
+        line.graphics.lineTo(CELL_MARGIN + pos[1].x * (CELL_MARGIN + CELL_WIDTH) + CELL_WIDTH * 0.5, CELL_MARGIN + pos[1].y * (CELL_MARGIN + CELL_WIDTH) + CELL_WIDTH * 0.5);
+        line.graphics.endStroke();
+        stage.addChild(line);
+    }
     stage.update();
 };

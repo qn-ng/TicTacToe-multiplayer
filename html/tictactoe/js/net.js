@@ -27,10 +27,12 @@ socket.on('make a move', function (msg) {
 socket.on('join table', function (msg) {
     currentTurn = msg.currentTurn;
     playerType = msg.playerX === playerName ? "x" : "o";
+    $("#player" + playerType.toUpperCase()).removeClass("list-group-item-danger").addClass("list-group-item-success");
     $("#playerX").text("[X] " + msg.playerX);
     $("#playerO").text("[O] " + msg.playerO);
     $("#player" + currentTurn.toUpperCase()).addClass("current");
     $("ul").first().show();
+    $("#leaveBtn").show();
     $("#messagePanel").show();
     $("#loadingTxt").hide();
     removeOverlay();
@@ -47,7 +49,14 @@ $(document).ready(function () {
         socket.emit('join queue', name);
         playerName = name;
         $("#loadingTxt").show();
+        $("#leaveBtn").show();
         $this.parents("div").first().hide();
+    });
+
+    $("#leaveBtn").on("click", function (e) {
+        if (overlayContainter !== null)
+            return;
+        socket.emit("leave game", null);
     });
 
     $("#sendBtn").on("click", function (e) {
@@ -62,21 +71,6 @@ $(document).ready(function () {
         }
     });
 });
-
-var drawResultLine = function (data) {
-    for (var i = 0; i < data.length; i++)
-    {
-        var pos = data[i];
-        var line = new createjs.Shape();
-        line.graphics.setStrokeStyle(3);
-        line.graphics.beginStroke("#555555");
-        line.graphics.moveTo(CELL_MARGIN + pos[0].x * (CELL_MARGIN + CELL_WIDTH) + CELL_WIDTH * 0.5, CELL_MARGIN + pos[0].y * (CELL_MARGIN + CELL_WIDTH) + CELL_WIDTH * 0.5);
-        line.graphics.lineTo(CELL_MARGIN + pos[1].x * (CELL_MARGIN + CELL_WIDTH) + CELL_WIDTH * 0.5, CELL_MARGIN + pos[1].y * (CELL_MARGIN + CELL_WIDTH) + CELL_WIDTH * 0.5);
-        line.graphics.endStroke();
-        stage.addChild(line);
-    }
-    stage.update();
-};
 
 var sidebarInit = function () {
     //side bar (re)init
@@ -104,7 +98,7 @@ var makeAMove = function (x, y) {
             canMove = true;
         }
     });
-}
+};
 
 var currentTurnStyle = function () {
     $("#playerX").toggleClass("current");
@@ -112,14 +106,16 @@ var currentTurnStyle = function () {
 };
 
 var sendMessage = function (e) {
-    var msg = $("#messageTxt").val();
-    $("#messageTxt").val("");
+    var $messageTxt = $("#messageTxt");
+    var msg = $messageTxt.val();
+    $messageTxt.val("");
     appendMessage(playerName + ": " + msg + "\n");
     socket.emit('chat message', msg);
 };
 
 var appendMessage = function (msg) {
-    $("#logPanel").val($("#logPanel").val() + msg);
-    if ($("#logPanel").length)
-        $("#logPanel").scrollTop($("#logPanel")[0].scrollHeight - $("#logPanel").height());
+    var $logPanel = $("#logPanel");
+    $logPanel.val($logPanel.val() + msg);
+    if ($logPanel.length)
+        $logPanel.scrollTop($logPanel[0].scrollHeight - $logPanel.height());
 };

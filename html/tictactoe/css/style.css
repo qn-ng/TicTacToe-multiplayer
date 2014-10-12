@@ -20,6 +20,6 @@ li {
     background-color: red;
 }
 
-#messagePanel, #loadingTxt, ul {
+#messagePanel, #loadingTxt, #leaveBtn, ul {
     display: none;
 }
