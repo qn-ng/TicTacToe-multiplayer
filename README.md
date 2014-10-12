@@ -2,7 +2,7 @@
 
 _Simple realtime multiplayer Tic-Tac-Toe game. Powered by nodejs, socket.io and easeljs, jquery, bootstrap._
 
-_Demo: (updating)_
+**Demo: (updating)**
 
 ## Setup
 
@@ -18,6 +18,7 @@ Be sure you have `nodejs`, `npm`, `bower` and `grunt-cli` pre-installed. To inst
 
 1. `cd nodejs/tictactoe/`
 2. `npm install`
+3. `node tictactoe.js`
 
 ## Technology
 * NodeJS + Socket.IO
