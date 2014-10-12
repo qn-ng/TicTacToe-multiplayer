@@ -49,7 +49,6 @@ $(document).ready(function () {
         socket.emit('join queue', name);
         playerName = name;
         $("#loadingTxt").show();
-        $("#leaveBtn").show();
         $this.parents("div").first().hide();
     });
 
@@ -78,6 +77,7 @@ var sidebarInit = function () {
     $("#messageTxt").val("");
     $("#logPanel").val("");
     $("ul").first().hide();
+    $("#leaveBtn").hide();
     $("#messagePanel").hide();
     $(".current").first().removeClass("current");
 };
