@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         bowercopy: {
             options: {
-                clean: false
+                clean: true
             },
             js: {
                 options: {
