@@ -23,7 +23,9 @@ Be sure you have `nodejs`, `npm`, `bower` and `grunt-cli` pre-installed. To inst
 
 1. `cd html/tictactoe/`
 2. `npm install`
-3. `grunt dev`
+3. `grunt --url={YOUR_URL}:3000`. Ex `grunt --url=http://my.domain:3000`
+
+_If you leave the `--url` parameter empty or simply run `grunt`, the default url `http://localhost:3000` will be used_
 
 Open `html/tictactoe/index.html` to start the game.
 
