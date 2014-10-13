@@ -80,6 +80,7 @@ var sidebarInit = function () {
     $("#leaveBtn").hide();
     $("#messagePanel").hide();
     $(".current").first().removeClass("current");
+    $("#player" + playerType.toUpperCase()).removeClass("list-group-item-success").addClass("list-group-item-danger");
 };
 
 var endGame = function (value) {
@@ -87,8 +88,8 @@ var endGame = function (value) {
     socket.emit('join queue', playerName);
     stage.clear();
     stage.removeAllChildren();
-    init();
     sidebarInit();
+    init();
 };
 
 var makeAMove = function (x, y) {
