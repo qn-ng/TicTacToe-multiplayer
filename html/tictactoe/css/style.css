@@ -23,3 +23,9 @@ li {
 #messagePanel, #loadingTxt, #leaveBtn, ul {
     display: none;
 }
+
+#footer {
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+}
