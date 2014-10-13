@@ -33,7 +33,7 @@ Open `html/tictactoe/index.html` to start the game.
 * Bootstrap
 
 ## License
-See [LICENSE](../blob/master/LICENSE)
+See [LICENSE](LICENSE)
 
 _Tweet me [@nquocnghia](https://twitter.com/nquocnghia "nquocnghia on twitter")_
 
