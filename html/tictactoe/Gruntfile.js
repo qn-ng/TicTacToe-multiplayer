@@ -1,10 +1,12 @@
 module.exports = function (grunt) {
 
+    var url = grunt.option('url') || 'http://localhost:3000';
+
     // Project configuration.
     grunt.initConfig({
         bowercopy: {
             options: {
-                clean: true
+                clean: false
             },
             js: {
                 options: {
@@ -33,19 +35,8 @@ module.exports = function (grunt) {
                 },
                 options: {
                     replacements: [{
-                        pattern: 'http://localhost:3000',
-                        replacement: 'http://bassdrop.vn:3000'
-                    }]
-                }
-            },
-            dev: {
-                files: {
-                    './': ['index.html', 'js/ui.js']
-                },
-                options: {
-                    replacements: [{
-                        pattern: 'http://bassdrop.vn:3000',
-                        replacement: 'http://localhost:3000'
+                        pattern: /http:\/\/\s*(.+?)\s*:3000/,
+                        replacement: url
                     }]
                 }
             }
@@ -55,7 +46,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-bowercopy');
     grunt.loadNpmTasks('grunt-string-replace');
 
-    grunt.registerTask('default', ['bowercopy', 'string-replace:dist']);
-    grunt.registerTask('dev', ['bowercopy', 'string-replace:dev']);
+    grunt.registerTask('default', ['bowercopy', 'string-replace']);
 
 };
