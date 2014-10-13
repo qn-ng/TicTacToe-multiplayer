@@ -32,6 +32,9 @@ Open `html/tictactoe/index.html` to start the game.
 * EaselJS + jQuery
 * Bootstrap
 
-_Contact me [@nquocnghia](https://twitter.com/nquocnghia "nquocnghia on twitter")_
+## License
+See [LICENSE](LICENSE)
+
+_Tweet me [@nquocnghia](https://twitter.com/nquocnghia "nquocnghia on twitter")_
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=nquocnghia&url=https://github.com/nquocnghia&title=TicTacToe-multiplayer&language=&tags=github&category=software)
