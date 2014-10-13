@@ -1,8 +1,13 @@
 # Multiplayer Tic-Tac-Toe
 
-_Simple realtime multiplayer Tic-Tac-Toe game. Powered by nodejs, socket.io and easeljs, jquery, bootstrap._
+_Simple realtime multiplayer Tic-Tac-Toe game with instant messaging. Powered by nodejs, socket.io and easeljs, jquery, bootstrap._
 
 **Demo: (updating)**
+
+## Features
+* Classic 5-in-a-row game
+* Pairing randomly from the queue (every x seconds)
+* Realtime IM between players in a same game
 
 ## Setup
 
