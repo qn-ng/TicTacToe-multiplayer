@@ -2,7 +2,7 @@
 
 _Simple realtime multiplayer Tic-Tac-Toe game with instant messaging. Powered by nodejs, socket.io and easeljs, jquery, bootstrap._
 
-**Demo: (updating)**
+**Demo: http://bassdrop.vn/tictactoe/**
 
 ## Features
 * Classic 5-in-a-row game
