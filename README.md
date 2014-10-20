@@ -1,6 +1,6 @@
 # Multiplayer Tic-Tac-Toe
 
-_Simple realtime multiplayer Tic-Tac-Toe game with instant messaging. Powered by nodejs, socket.io and easeljs, jquery, bootstrap._
+_Simple realtime multiplayer Tic-Tac-Toe game with instant messaging._
 
 **Demo: http://bassdrop.vn/tictactoe/**
 
@@ -25,7 +25,7 @@ Be sure you have `nodejs`, `npm`, `bower` and `grunt-cli` pre-installed. To inst
 2. `npm install`
 3. `grunt --url={YOUR_URL}:3000`. Ex `grunt --url=http://my.domain:3000`
 
-_If you leave the `--url` parameter empty or simply run `grunt`, the default url `http://localhost:3000` will be used_
+_If you leave the `--url` parameter empty or simply run `grunt`, the default url `http://localhost:3000` will be used._
 
 Open `html/tictactoe/index.html` to start the game.
 
