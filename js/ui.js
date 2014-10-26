@@ -1,4 +1,4 @@
-var socket = io('http://localhost:3000');
+var socket = io('http://pure-atoll-1245.herokuapp.com:80');
 var playerName = "Player";
 var playerType;
 
