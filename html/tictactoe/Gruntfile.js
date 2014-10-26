@@ -14,6 +14,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'jquery.min.js': 'jquery/dist/jquery.min.js',
+                    'jquery.min.map': 'jquery/dist/jquery.min.map',
                     'bootstrap.min.js': 'bootstrap/dist/js/bootstrap.min.js',
                     'easeljs-0.7.1.min.js': 'easeljs/lib/easeljs-0.7.1.min.js'
                 }
