@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Tic Tac Toe Realtime Multiplayer : Simple realtime multiplayer Tic-Tac-Toe game with instant messaging. Powered by nodejs, socket.io and easeljs, jquery, bootstrap.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Tic Tac Toe Realtime Multiplayer</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/nquocnghia/TicTacToe-multiplayer">View on GitHub</a>
+
+          <h1 id="project_title">Tic Tac Toe Realtime Multiplayer</h1>
+          <h2 id="project_tagline">Simple realtime multiplayer Tic-Tac-Toe game with instant messaging. Powered by nodejs, socket.io and easeljs, jquery, bootstrap.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/nquocnghia/TicTacToe-multiplayer/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/nquocnghia/TicTacToe-multiplayer/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="multiplayer-tic-tac-toe" class="anchor" href="#multiplayer-tic-tac-toe"><span class="octicon octicon-link"></span></a>Multiplayer Tic-Tac-Toe</h1>
+
+<p><em>Simple realtime multiplayer Tic-Tac-Toe game with instant messaging.</em></p>
+
+<p><strong>Demo: <a href="http://bassdrop.vn/tictactoe/">http://bassdrop.vn/tictactoe/</a></strong></p>
+
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Classic 5-in-a-row game</li>
+<li>Pairing randomly from the queue (every x seconds)</li>
+<li>Realtime IM between players in a same game</li>
+</ul>
+
+<h2>
+<a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h2>
+
+<p>Be sure you have <code>nodejs</code>, <code>npm</code>, <code>bower</code> and <code>grunt-cli</code> pre-installed. To install all the project's dependencies, run the following commands:</p>
+
+<h4>
+<a name="server" class="anchor" href="#server"><span class="octicon octicon-link"></span></a>Server</h4>
+
+<ol>
+<li><code>cd nodejs/tictactoe/</code></li>
+<li><code>npm install</code></li>
+<li><code>node tictactoe.js</code></li>
+</ol>
+
+<h4>
+<a name="client" class="anchor" href="#client"><span class="octicon octicon-link"></span></a>Client</h4>
+
+<ol>
+<li><code>cd html/tictactoe/</code></li>
+<li><code>npm install</code></li>
+<li>
+<code>grunt --url={YOUR_URL}:3000</code>. Ex <code>grunt --url=http://my.domain:3000</code>
+</li>
+</ol>
+
+<p><em>If you leave the <code>--url</code> parameter empty or simply run <code>grunt</code>, the default url <code>http://localhost:3000</code> will be used.</em></p>
+
+<p>Open <code>html/tictactoe/index.html</code> to start the game.</p>
+
+<h2>
+<a name="technology" class="anchor" href="#technology"><span class="octicon octicon-link"></span></a>Technology</h2>
+
+<ul>
+<li>NodeJS + Socket.IO</li>
+<li>EaselJS + jQuery</li>
+<li>Bootstrap</li>
+</ul>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>See <a href="LICENSE">LICENSE</a></p>
+
+<p><em>Tweet me <a href="https://twitter.com/nquocnghia" title="nquocnghia on twitter">@nquocnghia</a></em></p>
+
+<p><a href="https://flattr.com/submit/auto?user_id=nquocnghia&amp;url=https://github.com/nquocnghia&amp;title=TicTacToe-multiplayer&amp;language=&amp;tags=github&amp;category=software"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this git repo"></a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Tic Tac Toe Realtime Multiplayer maintained by <a href="https://github.com/nquocnghia">nquocnghia</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-56115370-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
