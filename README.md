@@ -2,7 +2,7 @@
 
 _Simple realtime multiplayer Tic-Tac-Toe game with instant messaging._
 
-**Demo: [CLICK HERE](http://nquocnghia.github.io/TicTacToe-multiplayer/)**
+***Demo: [CLICK HERE](http://nquocnghia.github.io/TicTacToe-multiplayer/)**
 
 ## Features
 * Classic 5-in-a-row game
