@@ -7,8 +7,18 @@
     <title>Tic-Tac-Toe</title>
 
     <!-- Bootstrap -->
-    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/vendor/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link rel='stylesheet prefetch' href='http://getbootstrap.com/2.3.2/assets/css/bootstrap.css'>-->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/tictactoe.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,7 +31,38 @@
 <div class="container">
     <div class="row">
         <div class="col-md-9">
-            <canvas id="mainCanvas"></canvas>
+            <!-- <canvas id="mainCanvas"></canvas>-->
+            <div class="row" >
+                <div class="col-md-3 new_span">
+                    <div class="row">
+                      <h1 class="row">Tic Tac Toe</h1>
+                      <div class="row">
+                        <div class="input-group">
+                          <span class="input-group-addon win_text">O won</span><strong id="o_win" class="win_times input-group-addon">0</strong><span class="input-group-addon">time(s)</span>
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-addon win_text">X won</span><strong id="x_win" class="win_times input-group-addon">0</strong><span class="input-group-addon">time(s)</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                        <ul class="row" id="game">
+                          <li id="one" class="btn col-md-1" >+</li>
+                          <li id="two" class="btn col-md-1">+</li>
+                          <li id="three" class="btn col-md-1">+</li>
+                          <li id="four" class="btn col-md-1">+</li>
+                          <li id="five" class="btn col-md-1">+</li>
+                          <li id="six" class="btn col-md-1">+</li>
+                          <li id="seven" class="btn col-md-1">+</li>
+                          <li id="eight" class="btn col-md-1">+</li>
+                          <li id="nine" class="btn col-md-1">+</li>
+                        </ul>
+                        <!--<div class="clr">&nbsp;</div>-->
+                        <div class="row"><a href="#" id="reset" class="btn-success btn col-md-3" >Restart1</a></div>                   
+                    </div>
+            
+        
             <div class="row" id="footer">
                 <em>Created by <a href="https://twitter.com/nquocnghia" title="nquocnghia on Twitter">nquocnghia</a>. <a
                         href="https://github.com/nquocnghia/TicTacToe-multiplayer" title="Source code on Github.com">Source
@@ -77,5 +118,6 @@
 <script src="http://localhost:3000/socket.io/socket.io.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/net.js"></script>
+<script src="js/tictactoe.js"></script>
 </body>
 </html>

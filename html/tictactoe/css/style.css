@@ -24,6 +24,10 @@ li {
     display: none;
 }
 
+ul#game {
+    display: block;    
+}
+
 #footer {
     font-size: 12px;
     text-align: center;
